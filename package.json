@@ -12,8 +12,11 @@
     "@types/node": "^16.18.126",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
+    "apexcharts": "^5.3.6",
     "react": "^19.2.3",
+    "react-apexcharts": "^1.9.0",
     "react-dom": "^19.2.3",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
     "styled-components": "^6.3.8",
@@ -45,6 +48,8 @@
     ]
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.91.2",
+    "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.36"
   }
