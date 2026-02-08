@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import React from "react";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap');
@@ -71,7 +71,10 @@ function App() {
     <>
       <GlobalStyle />
       <Router />
-      <ReactQueryDevtools initialIsOpen={true} />
+      {process.env.NODE_ENV === "development" &&
+        React.createElement(
+          require("./Devtools").default
+        )}
     </>
   );
 }
