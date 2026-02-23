@@ -117,7 +117,7 @@ interface InfoData {
     last_data_at: string;
 }
 
-interface PriceData {
+export interface PriceData {
     id: string;
     name: string;
     symbol: string;
@@ -223,7 +223,7 @@ function Coin() {
 
                     <Switch>
                         <Route path={`/:coinId/price`}>
-                            <Price />
+                            <Price tickersData={tickersData!} />
                         </Route>
                         <Route path={`/:coinId/chart`}>
                             <Chart coinId={coinId} />
